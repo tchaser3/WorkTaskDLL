@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70BCF9D7-9AA9-47E7-9CB1-9EDF09F2F57F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkTaskDLL</RootNamespace>
+    <AssemblyName>WorkTaskDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindSortedWorkTaskDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedWorkTaskDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedWorkTaskImportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedWorkTaskImportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskByTaskKeywordDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskByTaskKeywordDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskByWorkTaskDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskByWorkTaskDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskHoursDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskHoursDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskImportByLaborCodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskImportByLaborCodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskIMportByLaborTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskIMportByLaborTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkTaskEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkTaskImportEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkTaskImportEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWorkTaskActiveEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWorkTaskActiveEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWorkTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWorkTaskEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWorkTaskProductionRateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWorkTaskProductionRateEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTaskClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkTaskDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkTaskDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTaskImportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkTaskImportDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindSortedWorkTaskDataSet.xsc">
+      <DependentUpon>FindSortedWorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWorkTaskDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedWorkTaskDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedWorkTaskDataSet.xss">
+      <DependentUpon>FindSortedWorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWorkTaskImportDataSet.xsc">
+      <DependentUpon>FindSortedWorkTaskImportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWorkTaskImportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedWorkTaskImportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedWorkTaskImportDataSet.xss">
+      <DependentUpon>FindSortedWorkTaskImportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByTaskIDDataSet.xsc">
+      <DependentUpon>FindWorkTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskByTaskIDDataSet.xss">
+      <DependentUpon>FindWorkTaskByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByTaskKeywordDataSet.xsc">
+      <DependentUpon>FindWorkTaskByTaskKeywordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByTaskKeywordDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskByTaskKeywordDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskByTaskKeywordDataSet.xss">
+      <DependentUpon>FindWorkTaskByTaskKeywordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByWorkTaskDataSet.xsc">
+      <DependentUpon>FindWorkTaskByWorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByWorkTaskDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskByWorkTaskDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskByWorkTaskDataSet.xss">
+      <DependentUpon>FindWorkTaskByWorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskHoursDataSet.xsc">
+      <DependentUpon>FindWorkTaskHoursDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskHoursDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskHoursDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskHoursDataSet.xss">
+      <DependentUpon>FindWorkTaskHoursDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskImportByLaborCodeDataSet.xsc">
+      <DependentUpon>FindWorkTaskImportByLaborCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskImportByLaborCodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskImportByLaborCodeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskImportByLaborCodeDataSet.xss">
+      <DependentUpon>FindWorkTaskImportByLaborCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskIMportByLaborTypeDataSet.xsc">
+      <DependentUpon>FindWorkTaskIMportByLaborTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskIMportByLaborTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskIMportByLaborTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskIMportByLaborTypeDataSet.xss">
+      <DependentUpon>FindWorkTaskIMportByLaborTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskEntry.xsc">
+      <DependentUpon>InsertWorkTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkTaskEntry.xss">
+      <DependentUpon>InsertWorkTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskImportEntry.xsc">
+      <DependentUpon>InsertWorkTaskImportEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskImportEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkTaskImportEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkTaskImportEntry.xss">
+      <DependentUpon>InsertWorkTaskImportEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateWorkTaskActiveEntry.xsc">
+      <DependentUpon>UpdateWorkTaskActiveEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkTaskActiveEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWorkTaskActiveEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWorkTaskActiveEntry.xss">
+      <DependentUpon>UpdateWorkTaskActiveEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkTaskEntry.xsc">
+      <DependentUpon>UpdateWorkTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWorkTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWorkTaskEntry.xss">
+      <DependentUpon>UpdateWorkTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkTaskProductionRateEntry.xsc">
+      <DependentUpon>UpdateWorkTaskProductionRateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkTaskProductionRateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWorkTaskProductionRateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWorkTaskProductionRateEntry.xss">
+      <DependentUpon>UpdateWorkTaskProductionRateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskDataSet.xsc">
+      <DependentUpon>WorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkTaskDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkTaskDataSet.xss">
+      <DependentUpon>WorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskImportDataSet.xsc">
+      <DependentUpon>WorkTaskImportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskImportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkTaskImportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkTaskImportDataSet.xss">
+      <DependentUpon>WorkTaskImportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
