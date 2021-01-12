@@ -281,7 +281,7 @@ namespace WorkTaskDLL {
             
             private global::System.Data.DataColumn columnTransactionID;
             
-            private global::System.Data.DataColumn columnWorkTaskID;
+            private global::System.Data.DataColumn columnWorkTask;
             
             private global::System.Data.DataColumn columnLaborCode;
             
@@ -336,9 +336,9 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn WorkTaskIDColumn {
+            public global::System.Data.DataColumn WorkTaskColumn {
                 get {
-                    return this.columnWorkTaskID;
+                    return this.columnWorkTask;
                 }
             }
             
@@ -419,11 +419,11 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindSortedWorkTaskImportRow AddFindSortedWorkTaskImportRow(int WorkTaskID, string LaborCode, string LaborType, string ItemFunction, string ItemDescription, string UnitOfMeasure) {
+            public FindSortedWorkTaskImportRow AddFindSortedWorkTaskImportRow(string WorkTask, string LaborCode, string LaborType, string ItemFunction, string ItemDescription, string UnitOfMeasure) {
                 FindSortedWorkTaskImportRow rowFindSortedWorkTaskImportRow = ((FindSortedWorkTaskImportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        WorkTaskID,
+                        WorkTask,
                         LaborCode,
                         LaborType,
                         ItemFunction,
@@ -459,7 +459,7 @@ namespace WorkTaskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnTransactionID = base.Columns["TransactionID"];
-                this.columnWorkTaskID = base.Columns["WorkTaskID"];
+                this.columnWorkTask = base.Columns["WorkTask"];
                 this.columnLaborCode = base.Columns["LaborCode"];
                 this.columnLaborType = base.Columns["LaborType"];
                 this.columnItemFunction = base.Columns["ItemFunction"];
@@ -472,8 +472,8 @@ namespace WorkTaskDLL {
             private void InitClass() {
                 this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransactionID);
-                this.columnWorkTaskID = new global::System.Data.DataColumn("WorkTaskID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWorkTaskID);
+                this.columnWorkTask = new global::System.Data.DataColumn("WorkTask", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWorkTask);
                 this.columnLaborCode = new global::System.Data.DataColumn("LaborCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLaborCode);
                 this.columnLaborType = new global::System.Data.DataColumn("LaborType", typeof(string), null, global::System.Data.MappingType.Element);
@@ -490,7 +490,8 @@ namespace WorkTaskDLL {
                 this.columnTransactionID.AllowDBNull = false;
                 this.columnTransactionID.ReadOnly = true;
                 this.columnTransactionID.Unique = true;
-                this.columnWorkTaskID.AllowDBNull = false;
+                this.columnWorkTask.AllowDBNull = false;
+                this.columnWorkTask.MaxLength = 2147483647;
                 this.columnLaborCode.AllowDBNull = false;
                 this.columnLaborCode.MaxLength = 2147483647;
                 this.columnLaborType.AllowDBNull = false;
@@ -654,12 +655,12 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int WorkTaskID {
+            public string WorkTask {
                 get {
-                    return ((int)(this[this.tableFindSortedWorkTaskImport.WorkTaskIDColumn]));
+                    return ((string)(this[this.tableFindSortedWorkTaskImport.WorkTaskColumn]));
                 }
                 set {
-                    this[this.tableFindSortedWorkTaskImport.WorkTaskIDColumn] = value;
+                    this[this.tableFindSortedWorkTaskImport.WorkTaskColumn] = value;
                 }
             }
             
@@ -879,7 +880,7 @@ namespace WorkTaskDLL.FindSortedWorkTaskImportDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FindSortedWorkTaskImport";
             tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
-            tableMapping.ColumnMappings.Add("WorkTaskID", "WorkTaskID");
+            tableMapping.ColumnMappings.Add("WorkTask", "WorkTask");
             tableMapping.ColumnMappings.Add("LaborCode", "LaborCode");
             tableMapping.ColumnMappings.Add("LaborType", "LaborType");
             tableMapping.ColumnMappings.Add("ItemFunction", "ItemFunction");
