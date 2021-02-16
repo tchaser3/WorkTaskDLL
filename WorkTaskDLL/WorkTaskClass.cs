@@ -66,6 +66,24 @@ namespace WorkTaskDLL
         FindProductivityWorkTaskByBusinessLineDataSet aFindProductivityWorkTaskByBusinessLineDataSet;
         FindProductivityWorkTaskByBusinessLineDataSetTableAdapters.FindProductivityWorkTaskByBusinessLineTableAdapter aFindProductivityWorkTaskByBusinessLineTableAdapter;
 
+        FindProductivityWorkTaskByWorkTaskIDDataSet aFindProductivityWorkTaskByWorkTaskIDDataSet;
+        FindProductivityWorkTaskByWorkTaskIDDataSetTableAdapters.FindProductivityWorkTaskByWorkTaskIDTableAdapter aFindProductivityWorkTaskByWorkTaskIDTableAdapter;
+
+        public FindProductivityWorkTaskByWorkTaskIDDataSet FindProductivityWorkTaskByWorkTaskID(int intWorkTaskID, int intBusinessLineID, int intDepartmentID)
+        {
+            try
+            {
+                aFindProductivityWorkTaskByWorkTaskIDDataSet = new FindProductivityWorkTaskByWorkTaskIDDataSet();
+                aFindProductivityWorkTaskByWorkTaskIDTableAdapter = new FindProductivityWorkTaskByWorkTaskIDDataSetTableAdapters.FindProductivityWorkTaskByWorkTaskIDTableAdapter();
+                aFindProductivityWorkTaskByWorkTaskIDTableAdapter.Fill(aFindProductivityWorkTaskByWorkTaskIDDataSet.FindProductivityWorkTaskByWorkTaskID, intWorkTaskID, intBusinessLineID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Productivity Work Task By Work Task ID " + Ex.Message);
+            }
+
+            return aFindProductivityWorkTaskByWorkTaskIDDataSet;
+        }
         public FindProductivityWorkTaskByBusinessLineDataSet FindProductivityWorkTaskByBusinessLine(int intBusinessLineID, int intDepartmentID)
         {
             try
