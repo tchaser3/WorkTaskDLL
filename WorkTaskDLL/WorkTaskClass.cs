@@ -58,6 +58,74 @@ namespace WorkTaskDLL
         FindWorkTaskIMportByLaborTypeDataSet aFindWorkTaskImportByLaborTypeDataSet;
         FindWorkTaskIMportByLaborTypeDataSetTableAdapters.FindWorkTaskImportByLaborTypeTableAdapter aFindWorkTaskImportByLaborTypeTableAdapter;
 
+        ProductivityWorkTaskDataSet aProductivityWorkTaskDataSet;
+        ProductivityWorkTaskDataSetTableAdapters.productivityworktaskTableAdapter aProductivityWorkTaskTableAdapter;
+
+        InsertProductivityWorkTaskTableAdapters.QueriesTableAdapter aInsertProductivityWorkTaskTableAdapter;
+
+        FindProductivityWorkTaskByBusinessLineDataSet aFindProductivityWorkTaskByBusinessLineDataSet;
+        FindProductivityWorkTaskByBusinessLineDataSetTableAdapters.FindProductivityWorkTaskByBusinessLineTableAdapter aFindProductivityWorkTaskByBusinessLineTableAdapter;
+
+        public FindProductivityWorkTaskByBusinessLineDataSet FindProductivityWorkTaskByBusinessLine(int intBusinessLineID, int intDepartmentID)
+        {
+            try
+            {
+                aFindProductivityWorkTaskByBusinessLineDataSet = new FindProductivityWorkTaskByBusinessLineDataSet();
+                aFindProductivityWorkTaskByBusinessLineTableAdapter = new FindProductivityWorkTaskByBusinessLineDataSetTableAdapters.FindProductivityWorkTaskByBusinessLineTableAdapter();
+                aFindProductivityWorkTaskByBusinessLineTableAdapter.Fill(aFindProductivityWorkTaskByBusinessLineDataSet.FindProductivityWorkTaskByBusinessLine, intBusinessLineID, intDepartmentID);
+            }
+            catch (Exception ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Productivity Work Task By Business Line " + ex.Message);
+            }
+
+            return aFindProductivityWorkTaskByBusinessLineDataSet;
+        }
+        public bool InsertProductivityWorkTask(int intWorkTaskID, int intBusinessLineID, int intDepartmentID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertProductivityWorkTaskTableAdapter = new InsertProductivityWorkTaskTableAdapters.QueriesTableAdapter();
+                aInsertProductivityWorkTaskTableAdapter.InsertProductivityWorkTask(intWorkTaskID, intBusinessLineID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Insert Productivity Work Task " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public ProductivityWorkTaskDataSet GetProductivityWorkTaskInfo()
+        {
+            try
+            {
+                aProductivityWorkTaskDataSet = new ProductivityWorkTaskDataSet();
+                aProductivityWorkTaskTableAdapter = new ProductivityWorkTaskDataSetTableAdapters.productivityworktaskTableAdapter();
+                aProductivityWorkTaskTableAdapter.Fill(aProductivityWorkTaskDataSet.productivityworktask);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Get Productivity Work Task Info " + Ex.Message);
+            }
+
+            return aProductivityWorkTaskDataSet;
+        }
+        private void UpdateProductivityWorkTaskDB(ProductivityWorkTaskDataSet aProductivityWorkTaskDataSet)
+        {
+            try
+            {
+                aProductivityWorkTaskTableAdapter = new ProductivityWorkTaskDataSetTableAdapters.productivityworktaskTableAdapter();
+                aProductivityWorkTaskTableAdapter.Update(aProductivityWorkTaskDataSet.productivityworktask);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Update Productivity Work Task DB " + Ex.Message);
+            }
+        }
         public FindWorkTaskIMportByLaborTypeDataSet FindWorkTaskImportByLaborType(string strLaborType)
         {
             try

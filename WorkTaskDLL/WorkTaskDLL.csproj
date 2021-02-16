@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindProductivityWorkTaskByBusinessLineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductivityWorkTaskByBusinessLineDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindSortedWorkTaskDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWorkTaskIMportByLaborTypeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InsertProductivityWorkTask.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductivityWorkTask.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertWorkTaskEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +102,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertWorkTaskImportEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductivityWorkTaskDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductivityWorkTaskDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -128,6 +143,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindProductivityWorkTaskByBusinessLineDataSet.xsc">
+      <DependentUpon>FindProductivityWorkTaskByBusinessLineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductivityWorkTaskByBusinessLineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductivityWorkTaskByBusinessLineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductivityWorkTaskByBusinessLineDataSet.xss">
+      <DependentUpon>FindProductivityWorkTaskByBusinessLineDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindSortedWorkTaskDataSet.xsc">
       <DependentUpon>FindSortedWorkTaskDataSet.xsd</DependentUpon>
     </None>
@@ -216,6 +242,17 @@
     <None Include="FindWorkTaskIMportByLaborTypeDataSet.xss">
       <DependentUpon>FindWorkTaskIMportByLaborTypeDataSet.xsd</DependentUpon>
     </None>
+    <None Include="InsertProductivityWorkTask.xsc">
+      <DependentUpon>InsertProductivityWorkTask.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductivityWorkTask.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductivityWorkTask.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductivityWorkTask.xss">
+      <DependentUpon>InsertProductivityWorkTask.xsd</DependentUpon>
+    </None>
     <None Include="InsertWorkTaskEntry.xsc">
       <DependentUpon>InsertWorkTaskEntry.xsd</DependentUpon>
     </None>
@@ -237,6 +274,17 @@
     </None>
     <None Include="InsertWorkTaskImportEntry.xss">
       <DependentUpon>InsertWorkTaskImportEntry.xsd</DependentUpon>
+    </None>
+    <None Include="ProductivityWorkTaskDataSet.xsc">
+      <DependentUpon>ProductivityWorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductivityWorkTaskDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductivityWorkTaskDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductivityWorkTaskDataSet.xss">
+      <DependentUpon>ProductivityWorkTaskDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
