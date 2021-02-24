@@ -78,6 +78,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWorkTaskByWorkTaskDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWorkTaskDepartmentByDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskDepartmentByDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskDepartmentByLOBDepartmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskDepartmentByLOBDepartmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskDepartmentWorkTaskMatchDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWorkTaskHoursDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,6 +112,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertProductivityWorkTask.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkTaskDepartmentEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkTaskDepartmentEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="InsertWorkTaskEntry.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -123,6 +143,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateWorkTaskActiveEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateWorkTaskDepartmentActiveEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWorkTaskDepartmentActiveEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateWorkTaskEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -139,6 +164,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WorkTaskDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTaskDepartmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkTaskDepartmentDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="WorkTaskImportDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -225,6 +255,39 @@
     <None Include="FindWorkTaskByWorkTaskDataSet.xss">
       <DependentUpon>FindWorkTaskByWorkTaskDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindWorkTaskDepartmentByDateMatchDataSet.xsc">
+      <DependentUpon>FindWorkTaskDepartmentByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentByDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskDepartmentByDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskDepartmentByDateMatchDataSet.xss">
+      <DependentUpon>FindWorkTaskDepartmentByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentByLOBDepartmentDataSet.xsc">
+      <DependentUpon>FindWorkTaskDepartmentByLOBDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentByLOBDepartmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskDepartmentByLOBDepartmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskDepartmentByLOBDepartmentDataSet.xss">
+      <DependentUpon>FindWorkTaskDepartmentByLOBDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.xsc">
+      <DependentUpon>FindWorkTaskDepartmentWorkTaskMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskDepartmentWorkTaskMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.xss">
+      <DependentUpon>FindWorkTaskDepartmentWorkTaskMatchDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindWorkTaskHoursDataSet.xsc">
       <DependentUpon>FindWorkTaskHoursDataSet.xsd</DependentUpon>
     </None>
@@ -268,6 +331,17 @@
     </None>
     <None Include="InsertProductivityWorkTask.xss">
       <DependentUpon>InsertProductivityWorkTask.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskDepartmentEntry.xsc">
+      <DependentUpon>InsertWorkTaskDepartmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskDepartmentEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkTaskDepartmentEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkTaskDepartmentEntry.xss">
+      <DependentUpon>InsertWorkTaskDepartmentEntry.xsd</DependentUpon>
     </None>
     <None Include="InsertWorkTaskEntry.xsc">
       <DependentUpon>InsertWorkTaskEntry.xsd</DependentUpon>
@@ -317,6 +391,17 @@
     <None Include="UpdateWorkTaskActiveEntry.xss">
       <DependentUpon>UpdateWorkTaskActiveEntry.xsd</DependentUpon>
     </None>
+    <None Include="UpdateWorkTaskDepartmentActiveEntry.xsc">
+      <DependentUpon>UpdateWorkTaskDepartmentActiveEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkTaskDepartmentActiveEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWorkTaskDepartmentActiveEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWorkTaskDepartmentActiveEntry.xss">
+      <DependentUpon>UpdateWorkTaskDepartmentActiveEntry.xsd</DependentUpon>
+    </None>
     <None Include="UpdateWorkTaskEntry.xsc">
       <DependentUpon>UpdateWorkTaskEntry.xsd</DependentUpon>
     </None>
@@ -349,6 +434,17 @@
     </None>
     <None Include="WorkTaskDataSet.xss">
       <DependentUpon>WorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskDepartmentDataSet.xsc">
+      <DependentUpon>WorkTaskDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskDepartmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkTaskDepartmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkTaskDepartmentDataSet.xss">
+      <DependentUpon>WorkTaskDepartmentDataSet.xsd</DependentUpon>
     </None>
     <None Include="WorkTaskImportDataSet.xsc">
       <DependentUpon>WorkTaskImportDataSet.xsd</DependentUpon>

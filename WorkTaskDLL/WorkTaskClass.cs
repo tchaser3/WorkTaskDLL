@@ -69,6 +69,130 @@ namespace WorkTaskDLL
         FindProductivityWorkTaskByWorkTaskIDDataSet aFindProductivityWorkTaskByWorkTaskIDDataSet;
         FindProductivityWorkTaskByWorkTaskIDDataSetTableAdapters.FindProductivityWorkTaskByWorkTaskIDTableAdapter aFindProductivityWorkTaskByWorkTaskIDTableAdapter;
 
+        WorkTaskDepartmentDataSet aWorkTaskDepartmentDataSet;
+        WorkTaskDepartmentDataSetTableAdapters.worktaskdepartmentTableAdapter aWorkTaskDepartmentTableAdapter;
+
+        InsertWorkTaskDepartmentEntryTableAdapters.QueriesTableAdapter aInsertWorkTaskDepartmentTableAdapter;
+
+        UpdateWorkTaskDepartmentActiveEntryTableAdapters.QueriesTableAdapter aUpdateWorktTaskDepartmentActiveTableAdapter;
+
+        FindWorkTaskDepartmentWorkTaskMatchDataSet aFindWorkTaskDepartmentWorkTaskMatchDataSet;
+        FindWorkTaskDepartmentWorkTaskMatchDataSetTableAdapters.FindWorkTaskDepartmentWorkTaskMatchTableAdapter aFindWorkTaskDepartmentWorkTaskMatchTableAdapter;
+
+        FindWorkTaskDepartmentByLOBDepartmentDataSet aFindWorkTaskDepartmentByLOBDepartmentDataSet;
+        FindWorkTaskDepartmentByLOBDepartmentDataSetTableAdapters.FindWorkTaskDepartmentByLOBDepartmentTableAdapter aFindWorkTaskDepartmentByLOBDepartmentTableAdapter;
+
+        FindWorkTaskDepartmentByDateMatchDataSet aFindWorkTaskDepartmentByDateMatchDataSet;
+        FindWorkTaskDepartmentByDateMatchDataSetTableAdapters.FindWorkTaskDepartmentByDateMatchTableAdapter aFindWorkTaskDepartmentByDateMatchTableAdapter;
+
+        public FindWorkTaskDepartmentByLOBDepartmentDataSet FindWorkTaskDepartmentByLOBDepartment(int intBusinessLineID, int intDepartmentID)
+        {
+            try
+            {
+                aFindWorkTaskDepartmentByLOBDepartmentDataSet = new FindWorkTaskDepartmentByLOBDepartmentDataSet();
+                aFindWorkTaskDepartmentByLOBDepartmentTableAdapter = new FindWorkTaskDepartmentByLOBDepartmentDataSetTableAdapters.FindWorkTaskDepartmentByLOBDepartmentTableAdapter();
+                aFindWorkTaskDepartmentByLOBDepartmentTableAdapter.Fill(aFindWorkTaskDepartmentByLOBDepartmentDataSet.FindWorkTaskDepartmentByLOBDepartment, intBusinessLineID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Department By LOB Department " + Ex.Message);
+            }
+
+            return aFindWorkTaskDepartmentByLOBDepartmentDataSet;
+        }
+        public FindWorkTaskDepartmentByDateMatchDataSet FindWorkTaskDepartmentByDateMatch(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindWorkTaskDepartmentByDateMatchDataSet = new FindWorkTaskDepartmentByDateMatchDataSet();
+                aFindWorkTaskDepartmentByDateMatchTableAdapter = new FindWorkTaskDepartmentByDateMatchDataSetTableAdapters.FindWorkTaskDepartmentByDateMatchTableAdapter();
+                aFindWorkTaskDepartmentByDateMatchTableAdapter.Fill(aFindWorkTaskDepartmentByDateMatchDataSet.FindWorkTaskDepartmentByDateMatch, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Department By Date Match " + Ex.Message);
+            }
+
+            return aFindWorkTaskDepartmentByDateMatchDataSet;
+        }
+        public FindWorkTaskDepartmentWorkTaskMatchDataSet FindWorkTaskDepartmentWorkTaskMatch(int intWorkTaskID, int intBusinessLineID, int intDepartmentID)
+        {
+            try
+            {
+                aFindWorkTaskDepartmentWorkTaskMatchDataSet = new FindWorkTaskDepartmentWorkTaskMatchDataSet();
+                aFindWorkTaskDepartmentWorkTaskMatchTableAdapter = new FindWorkTaskDepartmentWorkTaskMatchDataSetTableAdapters.FindWorkTaskDepartmentWorkTaskMatchTableAdapter();
+                aFindWorkTaskDepartmentWorkTaskMatchTableAdapter.Fill(aFindWorkTaskDepartmentWorkTaskMatchDataSet.FindWorkTaskDepartmentWorkTaskMatch, intWorkTaskID, intBusinessLineID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Department Work Task Match " + Ex.Message);
+            }
+
+            return aFindWorkTaskDepartmentWorkTaskMatchDataSet;
+        }
+        public bool UpdateWorkTaskDepartmentActive(int intTransactionID, bool blnAssignmentActive)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateWorktTaskDepartmentActiveTableAdapter = new UpdateWorkTaskDepartmentActiveEntryTableAdapters.QueriesTableAdapter();
+                aUpdateWorktTaskDepartmentActiveTableAdapter.UpdateWorkTaskActive(intTransactionID, blnAssignmentActive);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Update Work Task Department Active " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public bool InsertWorkTaskDepartment(int intWorkTaskID, int intBusinessLineID, int intDepartmentID, int intEmployeeID, DateTime datTransactionDate)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertWorkTaskDepartmentTableAdapter = new InsertWorkTaskDepartmentEntryTableAdapters.QueriesTableAdapter();
+                aInsertWorkTaskDepartmentTableAdapter.InsertWorkTaskDepartment(intWorkTaskID, intBusinessLineID, intDepartmentID, intEmployeeID, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Insert Work Task Department " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public WorkTaskDepartmentDataSet GetWorkTaskDepartmentInfo()
+        {
+            try
+            {
+                aWorkTaskDepartmentDataSet = new WorkTaskDepartmentDataSet();
+                aWorkTaskDepartmentTableAdapter = new WorkTaskDepartmentDataSetTableAdapters.worktaskdepartmentTableAdapter();
+                aWorkTaskDepartmentTableAdapter.Fill(aWorkTaskDepartmentDataSet.worktaskdepartment);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Get Work Task Department Info " + Ex.Message);
+            }
+
+            return aWorkTaskDepartmentDataSet;
+        }
+        public void UpdateWorkTaskDepartmentDB(WorkTaskDepartmentDataSet aWorkTaskDepartmentDataSet)
+        {
+            try
+            {
+                aWorkTaskDepartmentTableAdapter = new WorkTaskDepartmentDataSetTableAdapters.worktaskdepartmentTableAdapter();
+                aWorkTaskDepartmentTableAdapter.Update(aWorkTaskDepartmentDataSet.worktaskdepartment);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Update Work Task Department DB " + Ex.Message);
+            }
+        }
         public FindProductivityWorkTaskByWorkTaskIDDataSet FindProductivityWorkTaskByWorkTaskID(int intWorkTaskID, int intBusinessLineID, int intDepartmentID)
         {
             try

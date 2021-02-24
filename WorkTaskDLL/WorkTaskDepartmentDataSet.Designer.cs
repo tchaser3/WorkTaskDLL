@@ -20,17 +20,17 @@ namespace WorkTaskDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FindWorkTaskByTaskIDDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("WorkTaskDepartmentDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FindWorkTaskByTaskIDDataSet : global::System.Data.DataSet {
+    public partial class WorkTaskDepartmentDataSet : global::System.Data.DataSet {
         
-        private FindWorkTaskByWorkTaskIDDataTable tableFindWorkTaskByWorkTaskID;
+        private worktaskdepartmentDataTable tableworktaskdepartment;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindWorkTaskByTaskIDDataSet() {
+        public WorkTaskDepartmentDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WorkTaskDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected FindWorkTaskByTaskIDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected WorkTaskDepartmentDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WorkTaskDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindWorkTaskByWorkTaskID"] != null)) {
-                    base.Tables.Add(new FindWorkTaskByWorkTaskIDDataTable(ds.Tables["FindWorkTaskByWorkTaskID"]));
+                if ((ds.Tables["worktaskdepartment"] != null)) {
+                    base.Tables.Add(new worktaskdepartmentDataTable(ds.Tables["worktaskdepartment"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WorkTaskDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindWorkTaskByWorkTaskIDDataTable FindWorkTaskByWorkTaskID {
+        public worktaskdepartmentDataTable worktaskdepartment {
             get {
-                return this.tableFindWorkTaskByWorkTaskID;
+                return this.tableworktaskdepartment;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WorkTaskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FindWorkTaskByTaskIDDataSet cln = ((FindWorkTaskByTaskIDDataSet)(base.Clone()));
+            WorkTaskDepartmentDataSet cln = ((WorkTaskDepartmentDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WorkTaskDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindWorkTaskByWorkTaskID"] != null)) {
-                    base.Tables.Add(new FindWorkTaskByWorkTaskIDDataTable(ds.Tables["FindWorkTaskByWorkTaskID"]));
+                if ((ds.Tables["worktaskdepartment"] != null)) {
+                    base.Tables.Add(new worktaskdepartmentDataTable(ds.Tables["worktaskdepartment"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WorkTaskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindWorkTaskByWorkTaskID = ((FindWorkTaskByWorkTaskIDDataTable)(base.Tables["FindWorkTaskByWorkTaskID"]));
+            this.tableworktaskdepartment = ((worktaskdepartmentDataTable)(base.Tables["worktaskdepartment"]));
             if ((initTable == true)) {
-                if ((this.tableFindWorkTaskByWorkTaskID != null)) {
-                    this.tableFindWorkTaskByWorkTaskID.InitVars();
+                if ((this.tableworktaskdepartment != null)) {
+                    this.tableworktaskdepartment.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WorkTaskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FindWorkTaskByTaskIDDataSet";
+            this.DataSetName = "WorkTaskDepartmentDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FindWorkTaskByTaskIDDataSet.xsd";
+            this.Namespace = "http://tempuri.org/WorkTaskDepartmentDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindWorkTaskByWorkTaskID = new FindWorkTaskByWorkTaskIDDataTable();
-            base.Tables.Add(this.tableFindWorkTaskByWorkTaskID);
+            this.tableworktaskdepartment = new worktaskdepartmentDataTable();
+            base.Tables.Add(this.tableworktaskdepartment);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeFindWorkTaskByWorkTaskID() {
+        private bool ShouldSerializeworktaskdepartment() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WorkTaskDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FindWorkTaskByTaskIDDataSet ds = new FindWorkTaskByTaskIDDataSet();
+            WorkTaskDepartmentDataSet ds = new WorkTaskDepartmentDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,29 @@ namespace WorkTaskDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void FindWorkTaskByWorkTaskIDRowChangeEventHandler(object sender, FindWorkTaskByWorkTaskIDRowChangeEvent e);
+        public delegate void worktaskdepartmentRowChangeEventHandler(object sender, worktaskdepartmentRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindWorkTaskByWorkTaskIDDataTable : global::System.Data.TypedTableBase<FindWorkTaskByWorkTaskIDRow> {
+        public partial class worktaskdepartmentDataTable : global::System.Data.TypedTableBase<worktaskdepartmentRow> {
+            
+            private global::System.Data.DataColumn columnTransactionID;
             
             private global::System.Data.DataColumn columnWorkTaskID;
             
-            private global::System.Data.DataColumn columnWorkTask;
+            private global::System.Data.DataColumn columnBusinessLineID;
             
-            private global::System.Data.DataColumn columnTaskCost;
+            private global::System.Data.DataColumn columnDepartmentID;
             
-            private global::System.Data.DataColumn columnTaskActive;
+            private global::System.Data.DataColumn columnAssignmentActive;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByWorkTaskIDDataTable() {
-                this.TableName = "FindWorkTaskByWorkTaskID";
+            public worktaskdepartmentDataTable() {
+                this.TableName = "worktaskdepartment";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +300,7 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindWorkTaskByWorkTaskIDDataTable(global::System.Data.DataTable table) {
+            internal worktaskdepartmentDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,9 +317,17 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected FindWorkTaskByWorkTaskIDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected worktaskdepartmentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TransactionIDColumn {
+                get {
+                    return this.columnTransactionID;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -330,25 +340,25 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn WorkTaskColumn {
+            public global::System.Data.DataColumn BusinessLineIDColumn {
                 get {
-                    return this.columnWorkTask;
+                    return this.columnBusinessLineID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TaskCostColumn {
+            public global::System.Data.DataColumn DepartmentIDColumn {
                 get {
-                    return this.columnTaskCost;
+                    return this.columnDepartmentID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TaskActiveColumn {
+            public global::System.Data.DataColumn AssignmentActiveColumn {
                 get {
-                    return this.columnTaskActive;
+                    return this.columnAssignmentActive;
                 }
             }
             
@@ -363,55 +373,56 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByWorkTaskIDRow this[int index] {
+            public worktaskdepartmentRow this[int index] {
                 get {
-                    return ((FindWorkTaskByWorkTaskIDRow)(this.Rows[index]));
+                    return ((worktaskdepartmentRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindWorkTaskByWorkTaskIDRowChangeEventHandler FindWorkTaskByWorkTaskIDRowChanging;
+            public event worktaskdepartmentRowChangeEventHandler worktaskdepartmentRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindWorkTaskByWorkTaskIDRowChangeEventHandler FindWorkTaskByWorkTaskIDRowChanged;
+            public event worktaskdepartmentRowChangeEventHandler worktaskdepartmentRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindWorkTaskByWorkTaskIDRowChangeEventHandler FindWorkTaskByWorkTaskIDRowDeleting;
+            public event worktaskdepartmentRowChangeEventHandler worktaskdepartmentRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindWorkTaskByWorkTaskIDRowChangeEventHandler FindWorkTaskByWorkTaskIDRowDeleted;
+            public event worktaskdepartmentRowChangeEventHandler worktaskdepartmentRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddFindWorkTaskByWorkTaskIDRow(FindWorkTaskByWorkTaskIDRow row) {
+            public void AddworktaskdepartmentRow(worktaskdepartmentRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByWorkTaskIDRow AddFindWorkTaskByWorkTaskIDRow(int WorkTaskID, string WorkTask, decimal TaskCost, bool TaskActive) {
-                FindWorkTaskByWorkTaskIDRow rowFindWorkTaskByWorkTaskIDRow = ((FindWorkTaskByWorkTaskIDRow)(this.NewRow()));
+            public worktaskdepartmentRow AddworktaskdepartmentRow(int WorkTaskID, int BusinessLineID, int DepartmentID, int AssignmentActive) {
+                worktaskdepartmentRow rowworktaskdepartmentRow = ((worktaskdepartmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         WorkTaskID,
-                        WorkTask,
-                        TaskCost,
-                        TaskActive};
-                rowFindWorkTaskByWorkTaskIDRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindWorkTaskByWorkTaskIDRow);
-                return rowFindWorkTaskByWorkTaskIDRow;
+                        BusinessLineID,
+                        DepartmentID,
+                        AssignmentActive};
+                rowworktaskdepartmentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowworktaskdepartmentRow);
+                return rowworktaskdepartmentRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByWorkTaskIDRow FindByWorkTaskID(int WorkTaskID) {
-                return ((FindWorkTaskByWorkTaskIDRow)(this.Rows.Find(new object[] {
-                            WorkTaskID})));
+            public worktaskdepartmentRow FindByTransactionID(int TransactionID) {
+                return ((worktaskdepartmentRow)(this.Rows.Find(new object[] {
+                            TransactionID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindWorkTaskByWorkTaskIDDataTable cln = ((FindWorkTaskByWorkTaskIDDataTable)(base.Clone()));
+                worktaskdepartmentDataTable cln = ((worktaskdepartmentDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,62 +430,70 @@ namespace WorkTaskDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindWorkTaskByWorkTaskIDDataTable();
+                return new worktaskdepartmentDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnTransactionID = base.Columns["TransactionID"];
                 this.columnWorkTaskID = base.Columns["WorkTaskID"];
-                this.columnWorkTask = base.Columns["WorkTask"];
-                this.columnTaskCost = base.Columns["TaskCost"];
-                this.columnTaskActive = base.Columns["TaskActive"];
+                this.columnBusinessLineID = base.Columns["BusinessLineID"];
+                this.columnDepartmentID = base.Columns["DepartmentID"];
+                this.columnAssignmentActive = base.Columns["AssignmentActive"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionID);
                 this.columnWorkTaskID = new global::System.Data.DataColumn("WorkTaskID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWorkTaskID);
-                this.columnWorkTask = new global::System.Data.DataColumn("WorkTask", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWorkTask);
-                this.columnTaskCost = new global::System.Data.DataColumn("TaskCost", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTaskCost);
-                this.columnTaskActive = new global::System.Data.DataColumn("TaskActive", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTaskActive);
+                this.columnBusinessLineID = new global::System.Data.DataColumn("BusinessLineID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBusinessLineID);
+                this.columnDepartmentID = new global::System.Data.DataColumn("DepartmentID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartmentID);
+                this.columnAssignmentActive = new global::System.Data.DataColumn("AssignmentActive", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAssignmentActive);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnWorkTaskID}, true));
+                                this.columnTransactionID}, true));
+                this.columnTransactionID.AutoIncrement = true;
+                this.columnTransactionID.AutoIncrementSeed = -1;
+                this.columnTransactionID.AutoIncrementStep = -1;
+                this.columnTransactionID.AllowDBNull = false;
+                this.columnTransactionID.ReadOnly = true;
+                this.columnTransactionID.Unique = true;
                 this.columnWorkTaskID.AllowDBNull = false;
-                this.columnWorkTaskID.Unique = true;
-                this.columnWorkTask.AllowDBNull = false;
-                this.columnWorkTask.MaxLength = 2147483647;
-                this.columnTaskCost.AllowDBNull = false;
+                this.columnBusinessLineID.AllowDBNull = false;
+                this.columnDepartmentID.AllowDBNull = false;
+                this.columnAssignmentActive.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByWorkTaskIDRow NewFindWorkTaskByWorkTaskIDRow() {
-                return ((FindWorkTaskByWorkTaskIDRow)(this.NewRow()));
+            public worktaskdepartmentRow NewworktaskdepartmentRow() {
+                return ((worktaskdepartmentRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindWorkTaskByWorkTaskIDRow(builder);
+                return new worktaskdepartmentRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindWorkTaskByWorkTaskIDRow);
+                return typeof(worktaskdepartmentRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindWorkTaskByWorkTaskIDRowChanged != null)) {
-                    this.FindWorkTaskByWorkTaskIDRowChanged(this, new FindWorkTaskByWorkTaskIDRowChangeEvent(((FindWorkTaskByWorkTaskIDRow)(e.Row)), e.Action));
+                if ((this.worktaskdepartmentRowChanged != null)) {
+                    this.worktaskdepartmentRowChanged(this, new worktaskdepartmentRowChangeEvent(((worktaskdepartmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -482,8 +501,8 @@ namespace WorkTaskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindWorkTaskByWorkTaskIDRowChanging != null)) {
-                    this.FindWorkTaskByWorkTaskIDRowChanging(this, new FindWorkTaskByWorkTaskIDRowChangeEvent(((FindWorkTaskByWorkTaskIDRow)(e.Row)), e.Action));
+                if ((this.worktaskdepartmentRowChanging != null)) {
+                    this.worktaskdepartmentRowChanging(this, new worktaskdepartmentRowChangeEvent(((worktaskdepartmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -491,8 +510,8 @@ namespace WorkTaskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindWorkTaskByWorkTaskIDRowDeleted != null)) {
-                    this.FindWorkTaskByWorkTaskIDRowDeleted(this, new FindWorkTaskByWorkTaskIDRowChangeEvent(((FindWorkTaskByWorkTaskIDRow)(e.Row)), e.Action));
+                if ((this.worktaskdepartmentRowDeleted != null)) {
+                    this.worktaskdepartmentRowDeleted(this, new worktaskdepartmentRowChangeEvent(((worktaskdepartmentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -500,14 +519,14 @@ namespace WorkTaskDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindWorkTaskByWorkTaskIDRowDeleting != null)) {
-                    this.FindWorkTaskByWorkTaskIDRowDeleting(this, new FindWorkTaskByWorkTaskIDRowChangeEvent(((FindWorkTaskByWorkTaskIDRow)(e.Row)), e.Action));
+                if ((this.worktaskdepartmentRowDeleting != null)) {
+                    this.worktaskdepartmentRowDeleting(this, new worktaskdepartmentRowChangeEvent(((worktaskdepartmentRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveFindWorkTaskByWorkTaskIDRow(FindWorkTaskByWorkTaskIDRow row) {
+            public void RemoveworktaskdepartmentRow(worktaskdepartmentRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -516,7 +535,7 @@ namespace WorkTaskDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FindWorkTaskByTaskIDDataSet ds = new FindWorkTaskByTaskIDDataSet();
+                WorkTaskDepartmentDataSet ds = new WorkTaskDepartmentDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -534,7 +553,7 @@ namespace WorkTaskDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindWorkTaskByWorkTaskIDDataTable";
+                attribute2.FixedValue = "worktaskdepartmentDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -578,76 +597,70 @@ namespace WorkTaskDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindWorkTaskByWorkTaskIDRow : global::System.Data.DataRow {
+        public partial class worktaskdepartmentRow : global::System.Data.DataRow {
             
-            private FindWorkTaskByWorkTaskIDDataTable tableFindWorkTaskByWorkTaskID;
+            private worktaskdepartmentDataTable tableworktaskdepartment;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindWorkTaskByWorkTaskIDRow(global::System.Data.DataRowBuilder rb) : 
+            internal worktaskdepartmentRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindWorkTaskByWorkTaskID = ((FindWorkTaskByWorkTaskIDDataTable)(this.Table));
+                this.tableworktaskdepartment = ((worktaskdepartmentDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int TransactionID {
+                get {
+                    return ((int)(this[this.tableworktaskdepartment.TransactionIDColumn]));
+                }
+                set {
+                    this[this.tableworktaskdepartment.TransactionIDColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int WorkTaskID {
                 get {
-                    return ((int)(this[this.tableFindWorkTaskByWorkTaskID.WorkTaskIDColumn]));
+                    return ((int)(this[this.tableworktaskdepartment.WorkTaskIDColumn]));
                 }
                 set {
-                    this[this.tableFindWorkTaskByWorkTaskID.WorkTaskIDColumn] = value;
+                    this[this.tableworktaskdepartment.WorkTaskIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string WorkTask {
+            public int BusinessLineID {
                 get {
-                    return ((string)(this[this.tableFindWorkTaskByWorkTaskID.WorkTaskColumn]));
+                    return ((int)(this[this.tableworktaskdepartment.BusinessLineIDColumn]));
                 }
                 set {
-                    this[this.tableFindWorkTaskByWorkTaskID.WorkTaskColumn] = value;
+                    this[this.tableworktaskdepartment.BusinessLineIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal TaskCost {
+            public int DepartmentID {
                 get {
-                    return ((decimal)(this[this.tableFindWorkTaskByWorkTaskID.TaskCostColumn]));
+                    return ((int)(this[this.tableworktaskdepartment.DepartmentIDColumn]));
                 }
                 set {
-                    this[this.tableFindWorkTaskByWorkTaskID.TaskCostColumn] = value;
+                    this[this.tableworktaskdepartment.DepartmentIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool TaskActive {
+            public int AssignmentActive {
                 get {
-                    try {
-                        return ((bool)(this[this.tableFindWorkTaskByWorkTaskID.TaskActiveColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TaskActive\' in table \'FindWorkTaskByWorkTaskID\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableworktaskdepartment.AssignmentActiveColumn]));
                 }
                 set {
-                    this[this.tableFindWorkTaskByWorkTaskID.TaskActiveColumn] = value;
+                    this[this.tableworktaskdepartment.AssignmentActiveColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTaskActiveNull() {
-                return this.IsNull(this.tableFindWorkTaskByWorkTaskID.TaskActiveColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTaskActiveNull() {
-                this[this.tableFindWorkTaskByWorkTaskID.TaskActiveColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -655,22 +668,22 @@ namespace WorkTaskDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class FindWorkTaskByWorkTaskIDRowChangeEvent : global::System.EventArgs {
+        public class worktaskdepartmentRowChangeEvent : global::System.EventArgs {
             
-            private FindWorkTaskByWorkTaskIDRow eventRow;
+            private worktaskdepartmentRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByWorkTaskIDRowChangeEvent(FindWorkTaskByWorkTaskIDRow row, global::System.Data.DataRowAction action) {
+            public worktaskdepartmentRowChangeEvent(worktaskdepartmentRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByWorkTaskIDRow Row {
+            public worktaskdepartmentRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -686,7 +699,7 @@ namespace WorkTaskDLL {
         }
     }
 }
-namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
+namespace WorkTaskDLL.WorkTaskDepartmentDataSetTableAdapters {
     
     
     /// <summary>
@@ -698,7 +711,7 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindWorkTaskByWorkTaskIDTableAdapter : global::System.ComponentModel.Component {
+    public partial class worktaskdepartmentTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -712,7 +725,7 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindWorkTaskByWorkTaskIDTableAdapter() {
+        public worktaskdepartmentTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -809,12 +822,46 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindWorkTaskByWorkTaskID";
+            tableMapping.DataSetTable = "worktaskdepartment";
+            tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
             tableMapping.ColumnMappings.Add("WorkTaskID", "WorkTaskID");
-            tableMapping.ColumnMappings.Add("WorkTask", "WorkTask");
-            tableMapping.ColumnMappings.Add("TaskCost", "TaskCost");
-            tableMapping.ColumnMappings.Add("TaskActive", "TaskActive");
+            tableMapping.ColumnMappings.Add("BusinessLineID", "BusinessLineID");
+            tableMapping.ColumnMappings.Add("DepartmentID", "DepartmentID");
+            tableMapping.ColumnMappings.Add("AssignmentActive", "AssignmentActive");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[worktaskdepartment] WHERE (([TransactionID] = @Original_TransactionID) AND ([WorkTaskID] = @Original_WorkTaskID) AND ([BusinessLineID] = @Original_BusinessLineID) AND ([DepartmentID] = @Original_DepartmentID) AND ([AssignmentActive] = @Original_AssignmentActive))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransactionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkTaskID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkTaskID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BusinessLineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BusinessLineID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssignmentActive", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssignmentActive", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[worktaskdepartment] ([WorkTaskID], [BusinessLineID], [DepartmentID], [AssignmentActive]) VALUES (@WorkTaskID, @BusinessLineID, @DepartmentID, @AssignmentActive);
+SELECT TransactionID, WorkTaskID, BusinessLineID, DepartmentID, AssignmentActive FROM worktaskdepartment WHERE (TransactionID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkTaskID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkTaskID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BusinessLineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BusinessLineID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssignmentActive", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssignmentActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[worktaskdepartment] SET [WorkTaskID] = @WorkTaskID, [BusinessLineID] = @BusinessLineID, [DepartmentID] = @DepartmentID, [AssignmentActive] = @AssignmentActive WHERE (([TransactionID] = @Original_TransactionID) AND ([WorkTaskID] = @Original_WorkTaskID) AND ([BusinessLineID] = @Original_BusinessLineID) AND ([DepartmentID] = @Original_DepartmentID) AND ([AssignmentActive] = @Original_AssignmentActive));
+SELECT TransactionID, WorkTaskID, BusinessLineID, DepartmentID, AssignmentActive FROM worktaskdepartment WHERE (TransactionID = @TransactionID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkTaskID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkTaskID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BusinessLineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BusinessLineID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssignmentActive", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssignmentActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransactionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkTaskID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkTaskID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BusinessLineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BusinessLineID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssignmentActive", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssignmentActive", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransactionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -830,24 +877,17 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindWorkTaskByWorkTaskID";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@intWorkTaskID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].CommandText = "SELECT TransactionID, WorkTaskID, BusinessLineID, DepartmentID, AssignmentActive " +
+                "FROM dbo.worktaskdepartment";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindWorkTaskByTaskIDDataSet.FindWorkTaskByWorkTaskIDDataTable dataTable, global::System.Nullable<int> intWorkTaskID) {
+        public virtual int Fill(WorkTaskDepartmentDataSet.worktaskdepartmentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((intWorkTaskID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(intWorkTaskID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -859,17 +899,130 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindWorkTaskByTaskIDDataSet.FindWorkTaskByWorkTaskIDDataTable GetData(global::System.Nullable<int> intWorkTaskID) {
+        public virtual WorkTaskDepartmentDataSet.worktaskdepartmentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((intWorkTaskID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(intWorkTaskID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            FindWorkTaskByTaskIDDataSet.FindWorkTaskByWorkTaskIDDataTable dataTable = new FindWorkTaskByTaskIDDataSet.FindWorkTaskByWorkTaskIDDataTable();
+            WorkTaskDepartmentDataSet.worktaskdepartmentDataTable dataTable = new WorkTaskDepartmentDataSet.worktaskdepartmentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(WorkTaskDepartmentDataSet.worktaskdepartmentDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(WorkTaskDepartmentDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "worktaskdepartment");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_TransactionID, int Original_WorkTaskID, int Original_BusinessLineID, int Original_DepartmentID, int Original_AssignmentActive) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_TransactionID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_WorkTaskID));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_BusinessLineID));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_DepartmentID));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_AssignmentActive));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int WorkTaskID, int BusinessLineID, int DepartmentID, int AssignmentActive) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(WorkTaskID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(BusinessLineID));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(DepartmentID));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(AssignmentActive));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int WorkTaskID, int BusinessLineID, int DepartmentID, int AssignmentActive, int Original_TransactionID, int Original_WorkTaskID, int Original_BusinessLineID, int Original_DepartmentID, int Original_AssignmentActive, int TransactionID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(WorkTaskID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(BusinessLineID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(DepartmentID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(AssignmentActive));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_TransactionID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_WorkTaskID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_BusinessLineID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_DepartmentID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_AssignmentActive));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(TransactionID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int WorkTaskID, int BusinessLineID, int DepartmentID, int AssignmentActive, int Original_TransactionID, int Original_WorkTaskID, int Original_BusinessLineID, int Original_DepartmentID, int Original_AssignmentActive) {
+            return this.Update(WorkTaskID, BusinessLineID, DepartmentID, AssignmentActive, Original_TransactionID, Original_WorkTaskID, Original_BusinessLineID, Original_DepartmentID, Original_AssignmentActive, Original_TransactionID);
         }
     }
     
@@ -885,6 +1038,8 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
+        private worktaskdepartmentTableAdapter _worktaskdepartmentTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -897,6 +1052,20 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public worktaskdepartmentTableAdapter worktaskdepartmentTableAdapter {
+            get {
+                return this._worktaskdepartmentTableAdapter;
+            }
+            set {
+                this._worktaskdepartmentTableAdapter = value;
             }
         }
         
@@ -919,6 +1088,10 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._worktaskdepartmentTableAdapter != null) 
+                            && (this._worktaskdepartmentTableAdapter.Connection != null))) {
+                    return this._worktaskdepartmentTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -932,6 +1105,9 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._worktaskdepartmentTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -941,8 +1117,17 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(FindWorkTaskByTaskIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(WorkTaskDepartmentDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._worktaskdepartmentTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.worktaskdepartment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._worktaskdepartmentTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -951,8 +1136,16 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(FindWorkTaskByTaskIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(WorkTaskDepartmentDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._worktaskdepartmentTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.worktaskdepartment.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._worktaskdepartmentTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -961,8 +1154,16 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(FindWorkTaskByTaskIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(WorkTaskDepartmentDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._worktaskdepartmentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.worktaskdepartment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._worktaskdepartmentTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -995,12 +1196,17 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(FindWorkTaskByTaskIDDataSet dataSet) {
+        public virtual int UpdateAll(WorkTaskDepartmentDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._worktaskdepartmentTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._worktaskdepartmentTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1034,6 +1240,15 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._worktaskdepartmentTableAdapter != null)) {
+                    revertConnections.Add(this._worktaskdepartmentTableAdapter, this._worktaskdepartmentTableAdapter.Connection);
+                    this._worktaskdepartmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._worktaskdepartmentTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._worktaskdepartmentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._worktaskdepartmentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._worktaskdepartmentTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1091,6 +1306,10 @@ namespace WorkTaskDLL.FindWorkTaskByTaskIDDataSetTableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._worktaskdepartmentTableAdapter != null)) {
+                    this._worktaskdepartmentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._worktaskdepartmentTableAdapter]));
+                    this._worktaskdepartmentTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

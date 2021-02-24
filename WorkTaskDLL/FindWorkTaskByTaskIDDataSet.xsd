@@ -25,6 +25,7 @@
               <Mapping SourceColumn="WorkTaskID" DataSetColumn="WorkTaskID" />
               <Mapping SourceColumn="WorkTask" DataSetColumn="WorkTask" />
               <Mapping SourceColumn="TaskCost" DataSetColumn="TaskCost" />
+              <Mapping SourceColumn="TaskActive" DataSetColumn="TaskActive" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -36,7 +37,7 @@
   <xs:element name="FindWorkTaskByTaskIDDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindWorkTaskByTaskIDDataSet" msprop:Generator_UserDSName="FindWorkTaskByTaskIDDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindWorkTaskByWorkTaskID" msprop:Generator_TableClassName="FindWorkTaskByWorkTaskIDDataTable" msprop:Generator_TableVarName="tableFindWorkTaskByWorkTaskID" msprop:Generator_TablePropName="FindWorkTaskByWorkTaskID" msprop:Generator_RowDeletingName="FindWorkTaskByWorkTaskIDRowDeleting" msprop:Generator_RowChangingName="FindWorkTaskByWorkTaskIDRowChanging" msprop:Generator_RowEvHandlerName="FindWorkTaskByWorkTaskIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindWorkTaskByWorkTaskIDRowDeleted" msprop:Generator_UserTableName="FindWorkTaskByWorkTaskID" msprop:Generator_RowChangedName="FindWorkTaskByWorkTaskIDRowChanged" msprop:Generator_RowEvArgName="FindWorkTaskByWorkTaskIDRowChangeEvent" msprop:Generator_RowClassName="FindWorkTaskByWorkTaskIDRow">
+        <xs:element name="FindWorkTaskByWorkTaskID" msprop:Generator_TableClassName="FindWorkTaskByWorkTaskIDDataTable" msprop:Generator_TableVarName="tableFindWorkTaskByWorkTaskID" msprop:Generator_RowChangedName="FindWorkTaskByWorkTaskIDRowChanged" msprop:Generator_TablePropName="FindWorkTaskByWorkTaskID" msprop:Generator_RowDeletingName="FindWorkTaskByWorkTaskIDRowDeleting" msprop:Generator_RowChangingName="FindWorkTaskByWorkTaskIDRowChanging" msprop:Generator_RowEvHandlerName="FindWorkTaskByWorkTaskIDRowChangeEventHandler" msprop:Generator_RowDeletedName="FindWorkTaskByWorkTaskIDRowDeleted" msprop:Generator_RowClassName="FindWorkTaskByWorkTaskIDRow" msprop:Generator_UserTableName="FindWorkTaskByWorkTaskID" msprop:Generator_RowEvArgName="FindWorkTaskByWorkTaskIDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WorkTaskID" msprop:Generator_ColumnVarNameInTable="columnWorkTaskID" msprop:Generator_ColumnPropNameInRow="WorkTaskID" msprop:Generator_ColumnPropNameInTable="WorkTaskIDColumn" msprop:Generator_UserColumnName="WorkTaskID" type="xs:int" />
@@ -48,6 +49,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="TaskCost" msprop:Generator_ColumnVarNameInTable="columnTaskCost" msprop:Generator_ColumnPropNameInRow="TaskCost" msprop:Generator_ColumnPropNameInTable="TaskCostColumn" msprop:Generator_UserColumnName="TaskCost" type="xs:decimal" />
+              <xs:element name="TaskActive" msprop:Generator_ColumnVarNameInTable="columnTaskActive" msprop:Generator_ColumnPropNameInRow="TaskActive" msprop:Generator_ColumnPropNameInTable="TaskActiveColumn" msprop:Generator_UserColumnName="TaskActive" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
