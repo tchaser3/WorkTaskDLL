@@ -98,6 +98,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWorkTaskDepartmentByWorkTaskDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWorkTaskDepartmentForBusinessLineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskDepartmentForBusinessLineDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -353,6 +358,17 @@
     </None>
     <None Include="FindWorkTaskDepartmentByWorkTaskDataSet.xss">
       <DependentUpon>FindWorkTaskDepartmentByWorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentForBusinessLineDataSet.xsc">
+      <DependentUpon>FindWorkTaskDepartmentForBusinessLineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentForBusinessLineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskDepartmentForBusinessLineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskDepartmentForBusinessLineDataSet.xss">
+      <DependentUpon>FindWorkTaskDepartmentForBusinessLineDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.xsc">
       <DependentUpon>FindWorkTaskDepartmentWorkTaskMatchDataSet.xsd</DependentUpon>
