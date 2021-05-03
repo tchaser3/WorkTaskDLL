@@ -113,6 +113,24 @@ namespace WorkTaskDLL
         FindWorkTaskByDepartmentDataSet aFindWorkTaskByDepartmentDataSet;
         FindWorkTaskByDepartmentDataSetTableAdapters.FindWorkTaskByDepartmentTableAdapter aFindWorkTaskByDepartmentTableAdapter;
 
+        FindWorkTaskImportByWorkTaskIDDataSet aFindWorkTaskImportByWorkTaskIDDataSet;
+        FindWorkTaskImportByWorkTaskIDDataSetTableAdapters.FindWorkTaskImportByWorkTaskIDTableAdapter aFindWorkTaskImportByWorkTaskIDTableAdapter;
+
+        public FindWorkTaskImportByWorkTaskIDDataSet FindWorkTaskImportByWorkTaskID(int intWorkTaskID)
+        {
+            try
+            {
+                aFindWorkTaskImportByWorkTaskIDDataSet = new FindWorkTaskImportByWorkTaskIDDataSet();
+                aFindWorkTaskImportByWorkTaskIDTableAdapter = new FindWorkTaskImportByWorkTaskIDDataSetTableAdapters.FindWorkTaskImportByWorkTaskIDTableAdapter();
+                aFindWorkTaskImportByWorkTaskIDTableAdapter.Fill(aFindWorkTaskImportByWorkTaskIDDataSet.FindWorkTaskImportByWorkTaskID, intWorkTaskID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Import By Work Task ID " + Ex.Message);
+            }
+
+            return aFindWorkTaskImportByWorkTaskIDDataSet;
+        }
         public FindWorkTaskByDepartmentDataSet FindWorkTaskByDepartment(int intDepartmentID)
         {
             try
