@@ -24,7 +24,6 @@
             <Mappings>
               <Mapping SourceColumn="WorkTaskID" DataSetColumn="WorkTaskID" />
               <Mapping SourceColumn="WorkTask" DataSetColumn="WorkTask" />
-              <Mapping SourceColumn="ItemDescription" DataSetColumn="ItemDescription" />
               <Mapping SourceColumn="TotalCount" DataSetColumn="TotalCount" />
             </Mappings>
             <Sources />
@@ -42,13 +41,6 @@
             <xs:sequence>
               <xs:element name="WorkTaskID" msprop:Generator_ColumnVarNameInTable="columnWorkTaskID" msprop:Generator_ColumnPropNameInRow="WorkTaskID" msprop:Generator_ColumnPropNameInTable="WorkTaskIDColumn" msprop:Generator_UserColumnName="WorkTaskID" type="xs:int" />
               <xs:element name="WorkTask" msprop:Generator_ColumnVarNameInTable="columnWorkTask" msprop:Generator_ColumnPropNameInRow="WorkTask" msprop:Generator_ColumnPropNameInTable="WorkTaskColumn" msprop:Generator_UserColumnName="WorkTask">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" msprop:Generator_UserColumnName="ItemDescription">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />

@@ -283,8 +283,6 @@ namespace WorkTaskDLL {
             
             private global::System.Data.DataColumn columnWorkTask;
             
-            private global::System.Data.DataColumn columnItemDescription;
-            
             private global::System.Data.DataColumn columnTotalCount;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -338,14 +336,6 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ItemDescriptionColumn {
-                get {
-                    return this.columnItemDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn TotalCountColumn {
                 get {
                     return this.columnTotalCount;
@@ -389,12 +379,11 @@ namespace WorkTaskDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindWorkTaskByDepartmentRow AddFindWorkTaskByDepartmentRow(int WorkTaskID, string WorkTask, string ItemDescription, int TotalCount) {
+            public FindWorkTaskByDepartmentRow AddFindWorkTaskByDepartmentRow(int WorkTaskID, string WorkTask, int TotalCount) {
                 FindWorkTaskByDepartmentRow rowFindWorkTaskByDepartmentRow = ((FindWorkTaskByDepartmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         WorkTaskID,
                         WorkTask,
-                        ItemDescription,
                         TotalCount};
                 rowFindWorkTaskByDepartmentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindWorkTaskByDepartmentRow);
@@ -420,7 +409,6 @@ namespace WorkTaskDLL {
             internal void InitVars() {
                 this.columnWorkTaskID = base.Columns["WorkTaskID"];
                 this.columnWorkTask = base.Columns["WorkTask"];
-                this.columnItemDescription = base.Columns["ItemDescription"];
                 this.columnTotalCount = base.Columns["TotalCount"];
             }
             
@@ -431,15 +419,11 @@ namespace WorkTaskDLL {
                 base.Columns.Add(this.columnWorkTaskID);
                 this.columnWorkTask = new global::System.Data.DataColumn("WorkTask", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWorkTask);
-                this.columnItemDescription = new global::System.Data.DataColumn("ItemDescription", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnItemDescription);
                 this.columnTotalCount = new global::System.Data.DataColumn("TotalCount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalCount);
                 this.columnWorkTaskID.AllowDBNull = false;
                 this.columnWorkTask.AllowDBNull = false;
                 this.columnWorkTask.MaxLength = 2147483647;
-                this.columnItemDescription.AllowDBNull = false;
-                this.columnItemDescription.MaxLength = 2147483647;
                 this.columnTotalCount.ReadOnly = true;
             }
             
@@ -600,17 +584,6 @@ namespace WorkTaskDLL {
                 }
                 set {
                     this[this.tableFindWorkTaskByDepartment.WorkTaskColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ItemDescription {
-                get {
-                    return ((string)(this[this.tableFindWorkTaskByDepartment.ItemDescriptionColumn]));
-                }
-                set {
-                    this[this.tableFindWorkTaskByDepartment.ItemDescriptionColumn] = value;
                 }
             }
             
@@ -804,7 +777,6 @@ namespace WorkTaskDLL.FindWorkTaskByDepartmentDataSetTableAdapters {
             tableMapping.DataSetTable = "FindWorkTaskByDepartment";
             tableMapping.ColumnMappings.Add("WorkTaskID", "WorkTaskID");
             tableMapping.ColumnMappings.Add("WorkTask", "WorkTask");
-            tableMapping.ColumnMappings.Add("ItemDescription", "ItemDescription");
             tableMapping.ColumnMappings.Add("TotalCount", "TotalCount");
             this._adapter.TableMappings.Add(tableMapping);
         }
