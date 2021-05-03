@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindSortedWorkTaskImportDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWorkTaskByDepartmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskByDepartmentDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWorkTaskByTaskIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +93,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWorkTaskDepartmentByLOBDepartmentDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWorkTaskDepartmentByWorkTaskDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskDepartmentByWorkTaskDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,6 +108,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWorkTaskHoursDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWorkTaskIDTotalCountByDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskIDTotalCountByDateDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWorkTaskImportByLaborCodeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +122,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWorkTaskIMportByLaborTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskSavedSheetByDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskSavedSheetByDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskSavedSheetByEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskSavedSheetByEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskUsageByDateTaskDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskUsageByDateTaskDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="InsertProductivityWorkTask.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -127,6 +157,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertWorkTaskImportEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkTaskSavedSheetEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkTaskSavedSheetEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkTaskSavedSheetTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkTaskSavedSheetTaskEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="ProductivityWorkTaskDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -175,6 +215,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WorkTaskImportDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="WorkTaskSavedSheetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkTaskSavedSheetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTaskSavedSheetTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkTaskSavedSheetTasksDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -221,6 +271,17 @@
     </None>
     <None Include="FindSortedWorkTaskImportDataSet.xss">
       <DependentUpon>FindSortedWorkTaskImportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByDepartmentDataSet.xsc">
+      <DependentUpon>FindWorkTaskByDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskByDepartmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskByDepartmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskByDepartmentDataSet.xss">
+      <DependentUpon>FindWorkTaskByDepartmentDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWorkTaskByTaskIDDataSet.xsc">
       <DependentUpon>FindWorkTaskByTaskIDDataSet.xsd</DependentUpon>
@@ -277,6 +338,17 @@
     <None Include="FindWorkTaskDepartmentByLOBDepartmentDataSet.xss">
       <DependentUpon>FindWorkTaskDepartmentByLOBDepartmentDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindWorkTaskDepartmentByWorkTaskDataSet.xsc">
+      <DependentUpon>FindWorkTaskDepartmentByWorkTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskDepartmentByWorkTaskDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskDepartmentByWorkTaskDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskDepartmentByWorkTaskDataSet.xss">
+      <DependentUpon>FindWorkTaskDepartmentByWorkTaskDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindWorkTaskDepartmentWorkTaskMatchDataSet.xsc">
       <DependentUpon>FindWorkTaskDepartmentWorkTaskMatchDataSet.xsd</DependentUpon>
     </None>
@@ -299,6 +371,17 @@
     <None Include="FindWorkTaskHoursDataSet.xss">
       <DependentUpon>FindWorkTaskHoursDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindWorkTaskIDTotalCountByDateDataSet.xsc">
+      <DependentUpon>FindWorkTaskIDTotalCountByDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskIDTotalCountByDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskIDTotalCountByDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskIDTotalCountByDateDataSet.xss">
+      <DependentUpon>FindWorkTaskIDTotalCountByDateDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindWorkTaskImportByLaborCodeDataSet.xsc">
       <DependentUpon>FindWorkTaskImportByLaborCodeDataSet.xsd</DependentUpon>
     </None>
@@ -320,6 +403,39 @@
     </None>
     <None Include="FindWorkTaskIMportByLaborTypeDataSet.xss">
       <DependentUpon>FindWorkTaskIMportByLaborTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskSavedSheetByDateMatchDataSet.xsc">
+      <DependentUpon>FindWorkTaskSavedSheetByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskSavedSheetByDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskSavedSheetByDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskSavedSheetByDateMatchDataSet.xss">
+      <DependentUpon>FindWorkTaskSavedSheetByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskSavedSheetByEmployeeDataSet.xsc">
+      <DependentUpon>FindWorkTaskSavedSheetByEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskSavedSheetByEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskSavedSheetByEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskSavedSheetByEmployeeDataSet.xss">
+      <DependentUpon>FindWorkTaskSavedSheetByEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskUsageByDateTaskDataSet.xsc">
+      <DependentUpon>FindWorkTaskUsageByDateTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskUsageByDateTaskDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskUsageByDateTaskDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskUsageByDateTaskDataSet.xss">
+      <DependentUpon>FindWorkTaskUsageByDateTaskDataSet.xsd</DependentUpon>
     </None>
     <None Include="InsertProductivityWorkTask.xsc">
       <DependentUpon>InsertProductivityWorkTask.xsd</DependentUpon>
@@ -364,6 +480,28 @@
     </None>
     <None Include="InsertWorkTaskImportEntry.xss">
       <DependentUpon>InsertWorkTaskImportEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskSavedSheetEntry.xsc">
+      <DependentUpon>InsertWorkTaskSavedSheetEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskSavedSheetEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkTaskSavedSheetEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkTaskSavedSheetEntry.xss">
+      <DependentUpon>InsertWorkTaskSavedSheetEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskSavedSheetTaskEntry.xsc">
+      <DependentUpon>InsertWorkTaskSavedSheetTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskSavedSheetTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkTaskSavedSheetTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkTaskSavedSheetTaskEntry.xss">
+      <DependentUpon>InsertWorkTaskSavedSheetTaskEntry.xsd</DependentUpon>
     </None>
     <None Include="ProductivityWorkTaskDataSet.xsc">
       <DependentUpon>ProductivityWorkTaskDataSet.xsd</DependentUpon>
@@ -456,6 +594,28 @@
     </None>
     <None Include="WorkTaskImportDataSet.xss">
       <DependentUpon>WorkTaskImportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskSavedSheetDataSet.xsc">
+      <DependentUpon>WorkTaskSavedSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskSavedSheetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkTaskSavedSheetDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkTaskSavedSheetDataSet.xss">
+      <DependentUpon>WorkTaskSavedSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskSavedSheetTasksDataSet.xsc">
+      <DependentUpon>WorkTaskSavedSheetTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskSavedSheetTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkTaskSavedSheetTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkTaskSavedSheetTasksDataSet.xss">
+      <DependentUpon>WorkTaskSavedSheetTasksDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

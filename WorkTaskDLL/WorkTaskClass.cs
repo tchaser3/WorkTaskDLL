@@ -85,6 +85,214 @@ namespace WorkTaskDLL
         FindWorkTaskDepartmentByDateMatchDataSet aFindWorkTaskDepartmentByDateMatchDataSet;
         FindWorkTaskDepartmentByDateMatchDataSetTableAdapters.FindWorkTaskDepartmentByDateMatchTableAdapter aFindWorkTaskDepartmentByDateMatchTableAdapter;
 
+        WorkTaskSavedSheetDataSet aWorkTaskSavedSheetDataSet;
+        WorkTaskSavedSheetDataSetTableAdapters.worktasksavedsheetTableAdapter aWorkTaskSavedSheetTableAdapter;
+
+        InsertWorkTaskSavedSheetEntryTableAdapters.QueriesTableAdapter aInsertWorkTaskSavedSheetTableAdapter;
+
+        FindWorkTaskSavedSheetByDateMatchDataSet aFindWorkTaskSavedSheetByDateMatchDataSet;
+        FindWorkTaskSavedSheetByDateMatchDataSetTableAdapters.FindWorkTaskSavedSheetByDateMatchTableAdapter aFindWorkTaskSavedSheetByDateMatchTableAdapter;
+
+        FindWorkTaskSavedSheetByEmployeeDataSet aFindWorkTaskSavedSheetByEmployeeDataSet;
+        FindWorkTaskSavedSheetByEmployeeDataSetTableAdapters.FindWorkTaskSavedSheetByEmployeeTableAdapter aFindWorkTaskSavedSheetByEmployeeTableAdapter;
+
+        WorkTaskSavedSheetTasksDataSet aWorkTaskSavedSheetTasksDataSet;
+        WorkTaskSavedSheetTasksDataSetTableAdapters.worktasksavedsheettasksTableAdapter aWorkTaskSavedSheetTasksTableAdpater;
+
+        InsertWorkTaskSavedSheetTaskEntryTableAdapters.QueriesTableAdapter aInsertWorkTaskSavedSheetTaskTableAdapter;
+
+        FindWorkTaskUsageByDateTaskDataSet aFindWorkTaskUsageByDateTaskDataSet;
+        FindWorkTaskUsageByDateTaskDataSetTableAdapters.FindWorkTaskUsageByDateTaskTableAdapter aFindWorkTaskUsageByDateTaskTableAdapter;
+
+        FindWorkTaskIDTotalCountByDateDataSet aFindWorkTaskIDTotalCountByDateDataSet;
+        FindWorkTaskIDTotalCountByDateDataSetTableAdapters.FindWorkTaskIDTotalCountByDateTableAdapter aFindWorkTaskIDTotalCountByDateTableAdapter;
+
+        FindWorkTaskDepartmentByWorkTaskDataSet aFindWorkTaskDepartmentByWorkTaskDataSet;
+        FindWorkTaskDepartmentByWorkTaskDataSetTableAdapters.FindWorkTaskDepartmentByWorkTaskTableAdapter aFindWorkTaskDepartmentByWorkTaskTableAdapter;
+
+        FindWorkTaskByDepartmentDataSet aFindWorkTaskByDepartmentDataSet;
+        FindWorkTaskByDepartmentDataSetTableAdapters.FindWorkTaskByDepartmentTableAdapter aFindWorkTaskByDepartmentTableAdapter;
+
+        public FindWorkTaskByDepartmentDataSet FindWorkTaskByDepartment(int intDepartmentID)
+        {
+            try
+            {
+                aFindWorkTaskByDepartmentDataSet = new FindWorkTaskByDepartmentDataSet();
+                aFindWorkTaskByDepartmentTableAdapter = new FindWorkTaskByDepartmentDataSetTableAdapters.FindWorkTaskByDepartmentTableAdapter();
+                aFindWorkTaskByDepartmentTableAdapter.Fill(aFindWorkTaskByDepartmentDataSet.FindWorkTaskByDepartment, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task by Department " + Ex.Message);
+            }
+
+            return aFindWorkTaskByDepartmentDataSet;
+        }
+        public FindWorkTaskDepartmentByWorkTaskDataSet FindWorkTaskDepartmentByWorkTask(int intWorkTaskID)
+        {
+            try
+            {
+                aFindWorkTaskDepartmentByWorkTaskDataSet = new FindWorkTaskDepartmentByWorkTaskDataSet();
+                aFindWorkTaskDepartmentByWorkTaskTableAdapter = new FindWorkTaskDepartmentByWorkTaskDataSetTableAdapters.FindWorkTaskDepartmentByWorkTaskTableAdapter();
+                aFindWorkTaskDepartmentByWorkTaskTableAdapter.Fill(aFindWorkTaskDepartmentByWorkTaskDataSet.FindWorkTaskDepartmentByWorkTask, intWorkTaskID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Department By Work Task " + Ex.Message);
+            }
+
+            return aFindWorkTaskDepartmentByWorkTaskDataSet;
+        }
+        public  FindWorkTaskIDTotalCountByDateDataSet FindWorkTaskIDTotalCountByDate(DateTime datTransactionID)
+        {
+            try
+            {
+                aFindWorkTaskIDTotalCountByDateDataSet = new FindWorkTaskIDTotalCountByDateDataSet();
+                aFindWorkTaskIDTotalCountByDateTableAdapter = new FindWorkTaskIDTotalCountByDateDataSetTableAdapters.FindWorkTaskIDTotalCountByDateTableAdapter();
+                aFindWorkTaskIDTotalCountByDateTableAdapter.Fill(aFindWorkTaskIDTotalCountByDateDataSet.FindWorkTaskIDTotalCountByDate, datTransactionID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task ID Total Count By Date " + Ex.Message);
+            }
+
+            return aFindWorkTaskIDTotalCountByDateDataSet;
+        }
+        public FindWorkTaskUsageByDateTaskDataSet FindWorkTaskUsageByDateTask(DateTime datTransactionDate, int intWorkTaskID)
+        {
+            try
+            {
+                aFindWorkTaskUsageByDateTaskDataSet = new FindWorkTaskUsageByDateTaskDataSet();
+                aFindWorkTaskUsageByDateTaskTableAdapter = new FindWorkTaskUsageByDateTaskDataSetTableAdapters.FindWorkTaskUsageByDateTaskTableAdapter();
+                aFindWorkTaskUsageByDateTaskTableAdapter.Fill(aFindWorkTaskUsageByDateTaskDataSet.FindWorkTaskUsageByDateTask, datTransactionDate, intWorkTaskID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Usage By Date Task " + Ex.Message);
+            }
+
+            return aFindWorkTaskUsageByDateTaskDataSet;
+        }
+        public bool InsertWorkTaskSavedSheetTask(int intWorkSheetID, int intWorkTaskID, int intBusinessLineID, int intDepartmentID, DateTime datTransactionDate)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertWorkTaskSavedSheetTaskTableAdapter = new InsertWorkTaskSavedSheetTaskEntryTableAdapters.QueriesTableAdapter();
+                //aInsertWorkTaskSavedSheetTaskTableAdapter.InsertWorkTaskSavedSheetTask(intWorkSheetID, intWorkTaskID, )
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Insert Work Taks Saved Sheet Task " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public WorkTaskSavedSheetTasksDataSet GetWorkTaskSavedSheetTasksInfo()
+        {
+            try
+            {
+                aWorkTaskSavedSheetTasksDataSet = new WorkTaskSavedSheetTasksDataSet();
+                aWorkTaskSavedSheetTasksTableAdpater = new WorkTaskSavedSheetTasksDataSetTableAdapters.worktasksavedsheettasksTableAdapter();
+                aWorkTaskSavedSheetTasksTableAdpater.Fill(aWorkTaskSavedSheetTasksDataSet.worktasksavedsheettasks);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Get Work Task Saved Sheet Task Info " + Ex.Message);
+            }
+
+            return aWorkTaskSavedSheetTasksDataSet;
+        }
+        public void UpdateWorkTaskSavedSheetsDB(WorkTaskSavedSheetTasksDataSet aWorkTaskSavedSheetTasksDataSet)
+        {
+            try
+            {
+                aWorkTaskSavedSheetTasksTableAdpater = new WorkTaskSavedSheetTasksDataSetTableAdapters.worktasksavedsheettasksTableAdapter();
+                aWorkTaskSavedSheetTasksTableAdpater.Update(aWorkTaskSavedSheetTasksDataSet.worktasksavedsheettasks);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Update Work Task Saved Sheet Task DB " + Ex.Message);
+            }
+        }
+        public FindWorkTaskSavedSheetByEmployeeDataSet FindWorkTaskSavedSheetByEmployee(int intEmployeeID)
+        {
+            try
+            {
+                aFindWorkTaskSavedSheetByEmployeeDataSet = new FindWorkTaskSavedSheetByEmployeeDataSet();
+                aFindWorkTaskSavedSheetByEmployeeTableAdapter = new FindWorkTaskSavedSheetByEmployeeDataSetTableAdapters.FindWorkTaskSavedSheetByEmployeeTableAdapter();
+                aFindWorkTaskSavedSheetByEmployeeTableAdapter.Fill(aFindWorkTaskSavedSheetByEmployeeDataSet.FindWorkTaskSavedSheetByEmployee, intEmployeeID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Saved Sheet By Employee " + Ex.Message);
+            }
+
+            return aFindWorkTaskSavedSheetByEmployeeDataSet;
+        }
+        public FindWorkTaskSavedSheetByDateMatchDataSet FindWorkTaskSavedSheetByDateMatch(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindWorkTaskSavedSheetByDateMatchDataSet = new FindWorkTaskSavedSheetByDateMatchDataSet();
+                aFindWorkTaskSavedSheetByDateMatchTableAdapter = new FindWorkTaskSavedSheetByDateMatchDataSetTableAdapters.FindWorkTaskSavedSheetByDateMatchTableAdapter();
+                aFindWorkTaskSavedSheetByDateMatchTableAdapter.Fill(aFindWorkTaskSavedSheetByDateMatchDataSet.FindWorkTaskSavedSheetByDateMatch, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Find Work Task Saved Sheet By Date Match " + Ex.Message);
+            }
+
+            return aFindWorkTaskSavedSheetByDateMatchDataSet;
+        }
+        public bool InsertWorkTaskSavedSheet(int intEmployeeID, string strSheetTitle, DateTime datTransactionDate)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertWorkTaskSavedSheetTableAdapter = new InsertWorkTaskSavedSheetEntryTableAdapters.QueriesTableAdapter();
+                aInsertWorkTaskSavedSheetTableAdapter.InsertWorkTaskSavedSheet(intEmployeeID, strSheetTitle, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Insert Work Task Saved Sheet " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public WorkTaskSavedSheetDataSet GetWorkTaskSavedSheetInfo()
+        {
+            try
+            {
+                aWorkTaskSavedSheetDataSet = new WorkTaskSavedSheetDataSet();
+                aWorkTaskSavedSheetTableAdapter = new WorkTaskSavedSheetDataSetTableAdapters.worktasksavedsheetTableAdapter();
+                aWorkTaskSavedSheetTableAdapter.Fill(aWorkTaskSavedSheetDataSet.worktasksavedsheet);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Get Work Taks Saved Sheet Info " + Ex.Message);
+            }
+
+            return aWorkTaskSavedSheetDataSet;
+        }
+        public void UpdateWorkTaskSavedSheetDB(WorkTaskSavedSheetDataSet aWorkTaskSavedSheetDataSet)
+        {
+            try
+            {
+                aWorkTaskSavedSheetTableAdapter = new WorkTaskSavedSheetDataSetTableAdapters.worktasksavedsheetTableAdapter();
+                aWorkTaskSavedSheetTableAdapter.Update(aWorkTaskSavedSheetDataSet.worktasksavedsheet);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Work Task Class // Update Work Taks Saved Sheet DB " + Ex.Message);
+            }
+        }
         public FindWorkTaskDepartmentByLOBDepartmentDataSet FindWorkTaskDepartmentByLOBDepartment(int intBusinessLineID, int intDepartmentID)
         {
             try
